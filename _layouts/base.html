@@ -1,3 +1,5 @@
+---
+---
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ page.lang | default: site.alt_lang | default: site.lang }}">
@@ -20,18 +22,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107284492-2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-107284492-2');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', '{{ site.google_analytics }}');
     </script>
 </head>
 
 <body>
     {{ content }}
+
+    <canvas id="canvas"></canvas>
+
+    {% include footer.html %}
 </body>
 
 </html>
