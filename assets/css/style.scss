@@ -155,8 +155,18 @@ li {
     }
     pre {
         margin: 20px;
-        font-size: 12pt;
+        font-size: 10pt;
     }
+    p {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    blockquote {
+        font-size: 10pt;
+        padding: 20px;
+    }
+
+    padding-bottom: 120px;
 }
 
 .profile-image {
