@@ -1,17 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-05T00:19:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/04/04/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-04-04T15:19:03+09:00</published><updated>2025-04-04T15:19:03+09:00</updated><id>http://localhost:4000/jekyll/update/2025/04/04/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/04/04/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-06T21:44:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GUNTAMANIA</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyllを導入してみた</title><link href="http://localhost:4000/blog/2025/04/04/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Jekyllを導入してみた" /><published>2025-04-04T15:19:03+09:00</published><updated>2025-04-04T15:19:03+09:00</updated><id>http://localhost:4000/blog/2025/04/04/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/04/welcome-to-jekyll.html"><![CDATA[<p>Jekyllを導入し、一旦記事をかけるようにしてみた。
+ちょっとどうなるかわからないが、一旦試験運用してみる。</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>各テーマを参考に、今までのサイトとほぼデザインを変えない方針で導入。</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>本当は過去記事を引っ越したりしたいが、そこまでできるかは不明なところ..</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Jekyllを導入し、一旦記事をかけるようにしてみた。 ちょっとどうなるかわからないが、一旦試験運用してみる。]]></summary></entry><entry><title type="html">精算ちゃん</title><link href="http://localhost:4000/product/2022/11/03/product-seisanchan.html" rel="alternate" type="text/html" title="精算ちゃん" /><published>2022-11-03T00:00:00+09:00</published><updated>2022-11-03T00:00:00+09:00</updated><id>http://localhost:4000/product/2022/11/03/product-seisanchan</id><content type="html" xml:base="http://localhost:4000/product/2022/11/03/product-seisanchan.html"><![CDATA[<p>グループで精算を行うアプリです。</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<ul>
+  <li><a href="https://apps.apple.com/jp/app/%E7%B2%BE%E7%AE%97%E3%81%A1%E3%82%83%E3%82%93-%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E5%89%B2%E3%82%8A%E5%8B%98%E3%82%A2%E3%83%97%E3%83%AA/id6444388748">App Store</a></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.guntamania.seisanchan&amp;pcampaignid=web_share">Google Play</a></li>
+</ul>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h1 id="概要">概要</h1>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>複数人でイベントをしたときに割り勘や精算を行うツールです。
+FireStoreにてデータの共有を行いますが、そのときに払い出されるハッシュ使ったURLを共有することで、ログインなしで精算結果を共有することができます。</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<h1 id="技術背景">技術背景</h1>
+
+<p>Flutterで制作しており、両OSをワンコードで管理しています。
+また、状態管理には <code class="language-plaintext highlighter-rouge">hooks_riverpod</code> を用いており、またマルチレイヤーによるモダンな設計を採用しています。</p>]]></content><author><name></name></author><category term="product" /><category term="Flutter," /><category term="Firebase" /><summary type="html"><![CDATA[グループで精算を行うアプリです。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/image/screen-seisan.png" /><media:content medium="image" url="http://localhost:4000/assets/image/screen-seisan.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">UXでユーザを殴る</title><link href="http://localhost:4000/product/2019/10/02/product-beat-with-ux.html" rel="alternate" type="text/html" title="UXでユーザを殴る" /><published>2019-10-02T00:00:00+09:00</published><updated>2019-10-02T00:00:00+09:00</updated><id>http://localhost:4000/product/2019/10/02/product-beat-with-ux</id><content type="html" xml:base="http://localhost:4000/product/2019/10/02/product-beat-with-ux.html"><![CDATA[<p>ユーザに良質なUXをなげつける様を表したデモアプリです<a href="https://openchat-search.com/">URL</a>。</p>
+
+<h1 id="概要">概要</h1>
+
+<p>表示技術にThree.jsを用いて制作しております。</p>
+
+<h1 id="制作背景">制作背景</h1>
+
+<p>ハッカソンイベントにて1日自由課題で制作いたしました。</p>]]></content><author><name></name></author><category term="product" /><category term="Three.js" /><summary type="html"><![CDATA[ユーザに良質なUXをなげつける様を表したデモアプリですURL。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/image/screen-beatui.png" /><media:content medium="image" url="http://localhost:4000/assets/image/screen-beatui.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lineオープンチャット検索</title><link href="http://localhost:4000/product/2019/08/01/product-line-open-chat.html" rel="alternate" type="text/html" title="Lineオープンチャット検索" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/product/2019/08/01/product-line-open-chat</id><content type="html" xml:base="http://localhost:4000/product/2019/08/01/product-line-open-chat.html"><![CDATA[<p>Lineのオープンチャットを検索するアプリです。
+<a href="https://openchat-search.com/">URL</a></p>
+
+<h1 id="概要">概要</h1>
+<p>Lineのオープンチャットに対し、検索をするWebアプリです。
+オープンチャット公開当時、公式アプリではチャットルームを検索することができず、サードパーティで対応し不便を解消しております。</p>
+
+<p>バックエンドをRuby on Railsで制作しております。</p>]]></content><author><name></name></author><category term="product" /><category term="Ruby" /><category term="on" /><category term="Rails," /><category term="Javascript," /><category term="Heroku" /><summary type="html"><![CDATA[Lineのオープンチャットを検索するアプリです。 URL]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/image/screen-openchat.png" /><media:content medium="image" url="http://localhost:4000/assets/image/screen-openchat.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

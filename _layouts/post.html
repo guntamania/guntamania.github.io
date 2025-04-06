@@ -1,0 +1,28 @@
+---
+layout: base
+---
+<section id="body">
+    <div class="title-wrapper">
+        <h1>
+            <div class="profile-image">
+                <img src="/assets/icons/icon_anim_x4.gif" alt="Profile animation" />
+            </div>
+            <div id="title-text" class="title-text">
+                {{page.categories}}
+            </div>
+        </h1>
+    </div>
+
+    <div class="article-wrapper">
+        <div class="main-article">
+            <h2>{{page.title}}</h2>
+            <p class="created-at">{{ page.date | date: "%Y-%m-%d" }}</p>
+            <div class="work-screenshot"><img class="screenshot-work" src="{{ page.image }}" /></div>
+            <div class="post-body">{{content}}</div>
+        </div>
+    </div>
+</section>
+
+<canvas id="canvas"></canvas>
+
+<div id="footer"></div>

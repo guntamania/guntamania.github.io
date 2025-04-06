@@ -1,0 +1,74 @@
+---
+layout: base
+---
+<section id="body">
+    <div class="title-wrapper">
+        <h1>
+            <div class="profile-image">
+                <img src="/assets/icons/icon_anim_x4.gif" alt="Profile animation" />
+            </div>
+            <div id="title-text" class="title-text">
+                GUNTAMANIA.COM
+            </div>
+        </h1>
+    </div>
+    <div class="article-wrapper">
+        <div class="main-article">
+            <h2>About ME</h2>
+            <p>Hiroki YAMADA / guntama</p>
+            <p class="socialmedia-icons-wrapper">
+                <a class="no-underline" href="https://twitter.com/guntamania">
+                    <img src="/assets/icons/twitter_logo_icon.svg" class="icon-socialmedia" alt="Twitter" />
+                </a>
+                <a class="no-underline" href="https://github.com/guntamania">
+                    <img src="/assets/icons/github_logo_icon.svg" class="icon-socialmedia" alt="GitHub" />
+                </a>
+                <a class="no-underline" href="https://www.linkedin.com/in/guntamania/">
+                    <img src="/assets/icons/linkedin_logo_icon.svg" class="icon-socialmedia" alt="LinkedIn" />
+                </a>
+            </p>
+            <p class="ja">
+                某暗号資産取引所に勤務するモバイルエンジニア。
+                幼少期よりプログラミングに親しみ、HTMLやWindowsでのゲームプログラミングを始める。
+                大学在学中に研究の傍らAndroidプログラミングを習得、新卒で入社した会社ではAndroid端末開発を行う。
+                その後、仮想通貨やブロックチェーン技術に出会い、現職に至る。
+            </p>
+            <p class="en">
+                I am an Android application engineer working at a company which deals with cryptocurrency exchanges.
+                I started Android programming when I was an University student and developed a Android phone as my first
+                career.
+                Direct messages on Twitter is the most convenient way to reach me.
+                LinkedIn is too spammy to make a contact.
+            </p>
+            <h2>Skills and Interests</h2>
+            <div>Android / Kotlin / Ruby on Rails / JavaScript / flutter / Vue.js / C# / Cryptocurrency</div>
+
+            <h2>Writings</h2>
+            <p class="ja">
+                日記です。
+            </p>
+
+            <div class="container mx-auto px-2 py-4">
+                {% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
+                {% for post in filtered_posts %}
+                {% include blog_block.html %}
+                {% endfor %}
+            </div>
+
+            <h2>Works</h2>
+            <p class="ja">
+                余暇に作った制作物です。
+            </p>
+
+            <div class="container mx-auto px-2 py-4">
+                {% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains 'product'" %}
+                {% for post in filtered_posts %}
+                {% include product_block.html %}
+                {% endfor %}
+            </div>
+        </div>
+</section>
+
+<canvas id="canvas"></canvas>
+
+<div id="footer"></div>

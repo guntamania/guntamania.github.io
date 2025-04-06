@@ -1,0 +1,7 @@
+<!-- Renders post date, title, and snippet of text. -->
+<p class="created-at">{{ post.date | date: "%Y-%m-%d" }}</p>
+<h3 class="blog-title">
+  {{ post.title }}
+</h3>
+<p>{{ post.content | strip_html | truncate:140 }}</p>
+<a href="{{ post.url | prepend: site.baseurl }}">more...</a>

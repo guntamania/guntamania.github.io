@@ -1,0 +1,10 @@
+<!-- Renders post date, title, and snippet of text. -->
+<h3 class="ja">{{ post.title }}</h3>
+<div class="work-wrapper">
+    <div class="work-screenshot"><img class="screenshot-work" src="{{ post.image }}" /></div>
+    <div class="work-description">
+        <p class="ja">{{ post.content | strip_html | truncate:80 }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}">more...</a>
+        <p class="work-technical">{{ post.tags }}</p>
+    </div>
+</div>

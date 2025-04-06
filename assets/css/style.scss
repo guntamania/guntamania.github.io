@@ -1,0 +1,297 @@
+---
+---
+
+// Base resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Variables (Light Mode Defaults)
+$main-black: #1A1A1A;
+$title-text: $main-black; // Use base variable
+$primary-text: #404040;
+$secondary: #808080;
+$accent: #426aac;
+$main-bg: #faf02f;
+$article-bg: #fefeee;
+$link-text: #1a1aaa;
+
+// Dark Mode Variables
+$main-black-dark: #FAFAFA;
+$primary-text-dark: #f0f0f0;
+$article-bg-dark: #000000;
+$link-text-dark: #8888ff;
+
+// Global Styles
+body {
+    background-color: $main-bg;
+    color: $main-black;
+    font-family: YuGothic, 游ゴシック, Meiryo, メイリオ, Hiragino Kaku Gothic Pro, ヒラギノ角ゴシック, sans-serif; // Apply base font family here
+}
+
+#canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
+
+#body {
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.article-wrapper {
+    margin: 0 auto;
+    background-color: $article-bg;
+}
+
+header {
+    display: block;
+    float: right;
+    cursor: pointer;
+    color: $title-text;
+}
+
+h1, h2 {
+    font-family: 'Jost', sans-serif;
+}
+
+h1 {
+    font-size: 24pt;
+    margin-bottom: 8px;
+    color: $title-text;
+    // display: flex と align-items: center は .title-wrapper h1 で指定
+}
+
+h2 {
+    font-size: 24pt;
+    margin-top: 18px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &.blog-title {
+        margin-top: 2px;
+    }
+}
+
+p {
+    line-height: 1.7;
+    color: $primary-text;
+    // font-family inherited from body
+
+    &.created-at {
+        font-size: 8pt;
+        margin-top: 16px;
+    }
+    &.socialmedia-icons-wrapper {
+      // No specific styles other than being a paragraph for layout?
+      // Add specific styles here if needed. Example: text-align: center;
+    }
+}
+
+a {
+    color: $link-text;
+    &:visited {
+        color: $link-text;
+    }
+    &.no-underline {
+        text-decoration: none;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.en {
+    display: none; /* Default */
+}
+
+.title-wrapper {
+    margin: 0 auto;
+    width: 92%;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+
+    h1 { // h1 要素に Flexbox を適用
+        display: flex;
+        align-items: center; // 垂直方向中央揃え
+        justify-content: center; // 全体を中央揃え（オプション）
+    }
+}
+
+.main-article {
+    margin: 0 auto;
+    background-color: $article-bg;
+    padding: 8px;
+    max-width: 800px;
+    width: 92%;
+}
+
+// ブログ記事中身
+.post-body {
+    h1 {
+        font-size: 18pt;
+        margin-top: 12px;
+    }
+    h2 {
+        font-size: 14pt;
+        margin-top: 12px;
+    }
+    h3 {
+        font-size: 14pt;
+        margin-top: 8px;
+    }
+    h4 {
+        font-size: 12pt;
+        margin-top: 6px;
+    }
+    pre {
+        margin: 20px;
+        font-size: 12pt;
+    }
+}
+
+.profile-image {
+    flex-shrink: 0; // 画像が縮まないようにする
+    width: 48px; // 画像の固定幅を指定 (必要に応じて調整)
+    margin-right: 15px; // 画像とテキストの間にスペースを追加
+
+    img { // 画像自体がコンテナに収まるように
+        display: block; // インライン要素の余白問題を回避
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.title-text {
+    flex-grow: 1; // 残りのスペースを埋める
+    text-align: left; // テキストを左揃えにする
+}
+
+.list-item-img {
+    height: 1.0em;
+    width: 1.0em;
+    margin-right: 8px;
+    vertical-align: middle; // Good practice for inline icons
+    fill: $primary-text;
+}
+
+img {
+    &.screenshot-work {
+        width: auto;
+        height: auto;
+        max-width: 240px;
+        max-height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.icon-socialmedia {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    vertical-align: middle; // Good practice for inline icons
+    fill: $primary-text;
+}
+
+.work-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px; // Add some space between work items
+
+    .work-screenshot {
+        width: 100%;
+        text-align: center; // Center the image within its container
+        margin-bottom: 8px; // Space below image on mobile
+    }
+
+    .work-description {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .work-technical {
+        color: $secondary;
+        font-size: small;
+        margin-top: 8px;
+    }
+}
+
+#footer {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+// Media Queries
+// PC用
+@media screen and (min-width: 1024px) {
+    h2 {
+        margin-top: 32px;
+        font-size: 32pt;
+    }
+    h3 {
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    .profile-image {
+        width: 60px; // 画像の固定幅を指定 (必要に応じて調整)
+    }
+
+    .work-wrapper {
+        flex-wrap: nowrap; // Arrange side-by-side on PC
+        align-items: flex-start; // Align items to the top
+
+        .work-screenshot {
+            width: 30%;
+            margin-bottom: 0; // Remove mobile margin
+            margin-right: 2%; // Add space between image and text
+            text-align: left; // Align image left
+        }
+
+        .work-description {
+            width: 68%; // Adjust width
+            padding: 0 8px; // Adjust padding if needed
+        }
+
+        .work-technical {
+            margin-top: 20px;
+        }
+    }
+}
+
+// Dark Mode Overrides
+@media (prefers-color-scheme: dark) {
+    body {
+        color: $main-black-dark;
+    }
+    p {
+        color: $primary-text-dark;
+    }
+    a, a:visited {
+        color: $link-text-dark;
+    }
+    .article-wrapper {
+        margin: 0 auto;
+        background-color: $article-bg-dark;
+    }
+    .main-article {
+        background-color: $article-bg-dark;
+    }
+    .list-item-img, .icon-socialmedia {
+        fill: $primary-text-dark;
+    }
+    .work-technical {
+        color: $secondary; // Assuming secondary doesn't change
+    }
+    // Add other selectors that need dark mode overrides if any
+}
