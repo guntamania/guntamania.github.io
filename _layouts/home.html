@@ -50,9 +50,12 @@ layout: base
 
             <div class="container mx-auto px-2 py-4">
                 {% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" %}
-                {% for post in filtered_posts %}
+                {% for post in filtered_posts limit:3 %}
                 {% include blog_block.html %}
                 {% endfor %}
+                <div class="centered-link">
+                    <a href="archives">old articles...</a>
+                </div>
             </div>
 
             <h2>Works</h2>

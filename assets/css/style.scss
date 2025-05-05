@@ -136,6 +136,16 @@ li {
     width: 92%;
 }
 
+.centered-link {
+    margin: 0 auto;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    a {
+        text-align: center;
+    }
+}
+
 // ブログ記事中身
 .post-body {
     h1 {
