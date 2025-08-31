@@ -176,6 +176,19 @@ li {
         font-size: 10pt;
         padding: 20px;
     }
+    ul, ol {
+        margin: 12px 0;
+        padding-left: 24px;
+        li {
+            list-style: disc;
+            margin-bottom: 4px;
+        }
+    }
+    ol {
+        li {
+            list-style: decimal;
+        }
+    }
 
     padding-bottom: 8px;
 }
