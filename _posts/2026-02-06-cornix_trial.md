@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cornicxを購入した
+title: Cornixを購入した
 date:  2026-02-06 7:20:00 +0900
 categories: blog
 ---
