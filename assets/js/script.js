@@ -52,13 +52,32 @@ function initAnim() {
   info.t = 0;
   canvasList = [];
   colorList = [];
+
+  // canvas要素の存在チェック
+  var canvasElement = document.getElementById("canvas");
+  if (!canvasElement) {
+    console.warn("Canvas element not found");
+    return;
+  }
+
   // canvas1個めの色指定
-  canvasList.push(document.getElementById("canvas"));
-  const color = rgbtohex($(".main-article").css("background-color"));
+  canvasList.push(canvasElement);
+
+  // .main-article要素の背景色を取得（存在しない場合はデフォルト色）
+  var color = "#fefeee"; // デフォルト色
+  var mainArticle = $(".main-article");
+  if (mainArticle.length > 0) {
+    var bgColor = mainArticle.css("background-color");
+    if (bgColor) {
+      color = rgbtohex(bgColor);
+    }
+  }
   colorList.push([color]);
+
   // 各キャンバスの初期化
   for (var canvasIndex in canvasList) {
     var canvas = canvasList[canvasIndex];
+    if (!canvas) continue;
     canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
     canvas.height = 1000; //波の高さ
     canvas.contextCache = canvas.getContext("2d");

@@ -153,7 +153,7 @@ li {
         margin-top: 12px;
     }
     h2 {
-        font-size: 14pt;
+        font-size: 16pt;
         margin-top: 12px;
     }
     h3 {
@@ -322,7 +322,7 @@ img {
         background-color: $article-bg-dark;
     }
     .list-item-img, .icon-socialmedia {
-        fill: $primary-text-dark;
+        filter: brightness(0) invert(1);
     }
     .work-technical {
         color: $secondary; // Assuming secondary doesn't change
