@@ -235,6 +235,10 @@ img {
     margin: 0 8px;
     vertical-align: middle; // Good practice for inline icons
     fill: $primary-text;
+
+    &.icon-x {
+        filter: none;
+    }
 }
 
 .work-wrapper {
@@ -323,6 +327,10 @@ img {
     }
     .list-item-img, .icon-socialmedia {
         filter: brightness(0) invert(1);
+    }
+
+    .icon-socialmedia.icon-x {
+        filter: invert(1);
     }
     .work-technical {
         color: $secondary; // Assuming secondary doesn't change
