@@ -167,10 +167,11 @@ li {
     pre {
         margin: 20px;
         font-size: 10pt;
+        overflow-x: auto;
     }
     p {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     blockquote {
         font-size: 10pt;
@@ -188,6 +189,18 @@ li {
         li {
             list-style: decimal;
         }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 12px auto;
+    }
+
+    .footnotes {
+        font-size: 9pt;
+        color: $secondary;
     }
 
     padding-bottom: 8px;
@@ -208,6 +221,8 @@ li {
 .title-text {
     flex-grow: 1; // 残りのスペースを埋める
     text-align: left; // テキストを左揃えにする
+    min-width: 0; // flex子要素のオーバーフローを防止
+    overflow: hidden;
 }
 
 .list-item-img {
@@ -279,6 +294,10 @@ img {
     h3 {
         margin-top: 24px;
         margin-bottom: 16px;
+    }
+
+    .post-body img {
+        max-width: 80%;
     }
 
     .profile-image {
