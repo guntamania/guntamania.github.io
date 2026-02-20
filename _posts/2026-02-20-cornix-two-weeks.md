@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cornixを使い始めて2週間経ったので、慣れ方とかコツとか
-date:  2026-02-20 23:20:00 +0900
+date:  2026-02-20 12:20:00 +0900
 categories: blog
 ---
 
