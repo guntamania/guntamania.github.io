@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Cornixを購入した
+title: Cornix LPを購入した
 date:  2026-02-06 7:20:00 +0900
 categories: blog
 ---
 
 
-最近話題のCornixを購入した。
+最近話題のCornix LPを購入した。
 届いたのが3日前で、今のところ毎日仕事でも使用し、なるべく早く慣れるように頑張って使っている。
 
 ![Cornix](/assets/image/HAO6PS4bwAAmNTB.jpg)
