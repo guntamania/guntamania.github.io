@@ -81,7 +81,7 @@ h3 {
 }
 
 p {
-    line-height: 1.7;
+    line-height: 2.0;
     color: $primary-text;
     // font-family inherited from body
 
@@ -169,9 +169,11 @@ li {
         font-size: 10pt;
         overflow-x: auto;
     }
+    font-size: 1.05rem;
+
     p {
-        padding-top: 4px;
-        padding-bottom: 4px;
+        line-height: 2.1;
+        margin: 0 0 1.8em;
     }
     blockquote {
         font-size: 10pt;
@@ -287,6 +289,13 @@ img {
 // Media Queries
 // PC用
 @media screen and (min-width: 1024px) {
+    // 固定幅で読みやすく (NOTE.com 風)
+    .title-wrapper,
+    .main-article {
+        width: 680px;
+        max-width: 680px;
+    }
+
     h2 {
         margin-top: 32px;
         font-size: 32pt;
